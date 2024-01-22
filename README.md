@@ -1,6 +1,11 @@
-# AngularTest
+# Fund display with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+This project lists different funds and their change in percent using this [API](https://ivarpivar.netlify.app/api).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0. [Bootstrap](https://ng-bootstrap.github.io/#/home) was used for styling.
+
+## Building and running the project
+
 
 ## Development server
 

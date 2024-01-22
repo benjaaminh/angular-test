@@ -8,7 +8,6 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   templateUrl: './fund-list.component.html',
-  styleUrl: './fund-list.component.css'
 })
 export class FundListComponent implements OnInit {
 
@@ -23,6 +22,7 @@ export class FundListComponent implements OnInit {
     this.httpClient
       .get('https://ivarpivar.netlify.app/api')
       .subscribe((response: any) => {
+        //response array is one element with data and status, we want to fetch data since it contains the relevant info
         if (response && response.length > 0 && response[0].data && response[0].data.length > 0) {
           this.data = response[0].data;
         } else {

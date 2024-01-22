@@ -5,10 +5,9 @@ import { FundListComponent } from './fund-list/fund-list.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FundListComponent],
+  imports: [RouterOutlet, FundListComponent],//import the fundList component
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-test';
+  title = 'Fund display';
 }
