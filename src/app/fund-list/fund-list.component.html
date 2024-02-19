@@ -1,25 +1,18 @@
 <div *ngIf="data.length > 0">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Fund Name</th>
-          <th>Change 1 month</th>
-          <th>Change 3 months</th>
-          <th>Change 3 years</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let fund of data">
-          <td>{{ fund.fundName }}</td>
-          <td>{{ fund.change1m }}</td>
-          <td>{{ fund.change3m }}</td>
-          <td>{{ fund.change3y }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
-  <div *ngIf="data.length === 0">
-    <p>No data available.</p>
-  </div>
-  
+  <ngx-charts-line-chart
+  [results]="chartData"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [scheme]="colorScheme">
+</ngx-charts-line-chart>
+</div>
+
+<div *ngIf="data.length === 0">
+  <p>No data available.</p>
+</div>
+
